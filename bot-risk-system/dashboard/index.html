@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM NEXUS | Fake Account Detection & Risk Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <div class="logo-text">
+                    <span>VeriSocial</span>
+                    <div class="team-name">by TEAM NEXUS</div>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="team-banner">
+                <span class="team-tag">TEAM NEXUS</span>
+                <h1>Fake Account Detection & Risk Analysis Platform</h1>
+            </div>
+            <p>Protect yourself from scams and verify influencer authenticity with our advanced account analysis platform. Get instant risk assessment for any social media profile.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Our advanced AI analyzes social media accounts in three simple steps</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-search"></i></div>
+                    <h3>Enter Username</h3>
+                    <p>Simply enter the social media username you want to verify. We support Instagram, Twitter/X, and YouTube.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI Analysis</h3>
+                    <p>Our AI examines follower patterns, engagement rates, posting behavior, and account history in seconds.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-shield-check"></i></div>
+                    <h3>Get Results</h3>
+                    <p>Receive a comprehensive risk score with detailed insights and red flags to help you make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About VeriSocial</h2>
+            <p class="section-subtitle">Built by TEAM NEXUS</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>VeriSocial was created to help people stay safe online by identifying fake accounts, bots, and fraudulent influencers. In an era where social media credibility matters more than ever, we provide the tools you need to verify authenticity.</p>
+                    
+                    <h3>The Technology</h3>
+                    <p>Our advanced AI algorithms analyze multiple data points including follower patterns, engagement rates, posting behavior, and account history to provide accurate risk assessments. We continuously update our models to stay ahead of evolving fraud tactics.</p>
+                    
+                    <h3>Team NEXUS</h3>
+                    <p>We're a team of developers, data scientists, and cybersecurity experts passionate about making social media safer for everyone. Our goal is to democratize access to account verification tools that were previously only available to large organizations.</p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Accounts Analyzed</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="container search-section">
+        <div class="search-header">
+            <h2>Analyze Any Social Media Account</h2>
+            <div class="tokens">
+                <span>Free Tokens:</span>
+                <div class="token-count" id="tokenCount">3</div>
+            </div>
+        </div>
+        <div class="search-box">
+            <div class="platform-selector">
+                <button class="platform-btn active" data-platform="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </button>
+                <button class="platform-btn" data-platform="twitter">
+                    <i class="fab fa-twitter"></i> X (Twitter)
+                </button>
+                <button class="platform-btn" data-platform="youtube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </button>
+            </div>
+            <div class="search-input-container">
+                <i class="fas fa-at search-icon"></i>
+                <input type="text" class="search-input" id="usernameInput" placeholder="Enter username (e.g., @influencername)">
+            </div>
+            <button class="analyze-btn" id="analyzeBtn">Analyze Account</button>
+        </div>
+        <div class="upgrade-cta" id="upgradeCta">
+            <h4>You've used all your free tokens!</h4>
+            <p>Upgrade to VeriSocial Pro for unlimited analysis and advanced features.</p>
+            <button class="analyze-btn" style="margin-top: 10px;">Upgrade Now</button>
+        </div>
+        <p class="risk-explanation" style="text-align: center; margin-top: 20px; color: var(--gray);">
+            Each analysis consumes 1 token. You have 3 free tokens to start.
+        </p>
+    </section>
+
+    <!-- Dashboard (Initially Hidden) -->
+    <section class="container dashboard" id="dashboard">
+        <div class="dashboard-header">
+            <h2>Account Analysis Results <span class="team-tag-small">TEAM NEXUS</span></h2>
+            <button class="back-btn" id="backBtn">
+                <i class="fas fa-arrow-left"></i> Back to Search
+            </button>
+        </div>
+        
+        <div class="dashboard-grid">
+            <!-- Account Overview -->
+<div class="card account-overview">
+    <h3 class="card-title">
+        <i class="fas fa-user-circle"></i> Account Overview
+    </h3>
+
+    <div class="account-header">
+        <div class="avatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="account-info">
+            <h3 id="displayUsername">@username</h3>
+            <p id="accountPlatform">Instagram</p>
+        </div>
+    </div>
+
+    <div class="account-stats">
+
+        <div class="stat">
+            <div class="stat-value" id="accountAgeBox">--</div>
+            <div class="stat-label">Account Age</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-value" id="followersBox">--</div>
+            <div class="stat-label">Followers</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-value" id="followingBox">--</div>
+            <div class="stat-label">Following</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-value" id="engagementBox">--</div>
+            <div class="stat-label">Engagement Rate</div>
+        </div>
+
+    </div>
+</div>
+
+            
+            <!-- Risk Gauge - Circular Ring Style -->
+            <div class="card risk-gauge">
+                <h3 class="card-title"><i class="fas fa-exclamation-triangle"></i> Risk Assessment</h3>
+                <div class="speedometer-container">
+                    <div class="circular-gauge">
+                        <svg class="gauge-svg" viewBox="0 0 200 200">
+                            <!-- Background circle -->
+                            <circle class="gauge-bg" cx="100" cy="100" r="80" />
+                            <!-- Progress circle -->
+                            <circle class="gauge-progress" id="gaugeProgress" cx="100" cy="100" r="80" />
+                        </svg>
+                        <div class="gauge-center">
+                            <div class="risk-score" id="riskScore">84</div>
+                            <div class="risk-label risk-high" id="riskLabel">HIGH RISK</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="risk-explanation" id="riskExplanation">
+                    This account exhibits multiple strong indicators of fake or bot behavior. We recommend avoiding interaction and not sharing personal information.
+                </p>
+            </div>
+            
+            <!-- Behavior Patterns Chart -->
+            <div class="card behavior-patterns">
+                <h3 class="card-title"><i class="fas fa-chart-line"></i> Activity & Growth Patterns</h3>
+                <div class="chart-container">
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Anomaly Indicators -->
+            <div class="card anomaly-indicators">
+                <h3 class="card-title"><i class="fas fa-flag"></i> Anomaly Indicators</h3>
+                <div class="indicator-list">
+                    <div class="indicator indicator-danger">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div class="indicator-text">
+                            <h4>Follower Spike</h4>
+                            <p>+75K followers in 2 weeks</p>
+                        </div>
+                    </div>
+                    <div class="indicator indicator-warning">
+                        <i class="fas fa-chart-bar"></i>
+                        <div class="indicator-text">
+                            <h4>Low Engagement</h4>
+                            <p>1.8% vs industry avg 3-6%</p>
+                        </div>
+                    </div>
+                    <div class="indicator indicator-warning">
+                        <i class="fas fa-clock"></i>
+                        <div class="indicator-text">
+                            <h4>Posting Pattern</h4>
+                            <p>Irregular activity bursts</p>
+                        </div>
+                    </div>
+                    <div class="indicator indicator-danger">
+                        <i class="fas fa-users"></i>
+                        <div class="indicator-text">
+                            <h4>Follower Quality</h4>
+                            <p>Many inactive/bot accounts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flagged Reasons -->
+            <div class="card flagged-reasons">
+                <h3 class="card-title"><i class="fas fa-clipboard-list"></i> Key Risk Factors</h3>
+                <div class="reasons-list">
+                    <div class="reason">
+                        <h4><i class="fas fa-rocket"></i> Sudden Follower Growth</h4>
+                        <p>Gained 75,000 followers in just 2 weeks, which is highly unusual and often indicates purchased followers or bot activity.</p>
+                    </div>
+                    <div class="reason">
+                        <h4><i class="fas fa-chart-line"></i> Low Engagement Rate</h4>
+                        <p>Only 1.8% engagement despite 125K followers. Authentic accounts typically see 3-6% engagement rates.</p>
+                    </div>
+                    <div class="reason">
+                        <h4><i class="fas fa-robot"></i> Bot-Like Followers</h4>
+                        <p>Analysis shows 68% of followers are inactive or suspicious accounts with no profile pictures and generic usernames.</p>
+                    </div>
+                    <div class="reason">
+                        <h4><i class="fas fa-comments"></i> Generic Comments</h4>
+                        <p>Most comments are generic phrases like "Nice!", "Great post!" with minimal genuine engagement.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Educational Section -->
+            <div class="card educational-section">
+                <h3 class="card-title"><i class="fas fa-graduation-cap"></i> Learn: Fake vs. Authentic Accounts</h3>
+                <div class="example-cards">
+                    <div class="example-card example-bad">
+                        <div class="example-header">
+                            <h3>Fake Account Red Flags</h3>
+                            <div class="example-tag tag-bad">High Risk</div>
+                        </div>
+                        <div class="example-points">
+                            <div class="example-point">
+                                <i class="fas fa-times-circle" style="color: var(--danger);"></i>
+                                <div>
+                                    <h4>Sudden Follower Spikes</h4>
+                                    <p>Gaining thousands of followers overnight or in unrealistic timeframes</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-times-circle" style="color: var(--danger);"></i>
+                                <div>
+                                    <h4>Very Low Engagement</h4>
+                                    <p>High follower count but minimal likes, comments, or shares</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-times-circle" style="color: var(--danger);"></i>
+                                <div>
+                                    <h4>Repetitive Content & Comments</h4>
+                                    <p>Generic comments like "Great post!" on many unrelated posts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card example-good">
+                        <div class="example-header">
+                            <h3>Authentic Account Indicators</h3>
+                            <div class="example-tag tag-good">Low Risk</div>
+                        </div>
+                        <div class="example-points">
+                            <div class="example-point">
+                                <i class="fas fa-check-circle" style="color: var(--safe);"></i>
+                                <div>
+                                    <h4>Steady Follower Growth</h4>
+                                    <p>Organic growth over time with normal fluctuations</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-check-circle" style="color: var(--safe);"></i>
+                                <div>
+                                    <h4>Healthy Engagement Rate</h4>
+                                    <p>3-6% engagement rate with meaningful comments</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-check-circle" style="color: var(--safe);"></i>
+                                <div>
+                                    <h4>Diverse, Original Content</h4>
+                                    <p>Varied posts with personal touches and authentic interactions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value Proposition -->
+            <div class="value-proposition">
+                <h3 class="card-title"><i class="fas fa-handshake"></i> Value for Different Audiences</h3>
+                <div class="value-cards">
+                    <div class="value-card">
+                        <h3><i class="fas fa-user-friends"></i> For Regular Users</h3>
+                        <div class="value-points">
+                            <div class="example-point">
+                                <i class="fas fa-shield-alt" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4>Safety & Scam Prevention</h4>
+                                    <p>Avoid interacting with fake accounts designed to steal personal information or spread malware.</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-ban" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4>Identify Fake Giveaways</h4>
+                                    <p>Detect fraudulent accounts pretending to run contests to collect user data.</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-comment-slash" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4>Reduce Spam Exposure</h4>
+                                    <p>Identify and block bot accounts that clutter your feed with spam comments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="value-card">
+                        <h3><i class="fas fa-briefcase"></i> For Brands & Marketers</h3>
+                        <div class="value-points">
+                            <div class="example-point">
+                                <i class="fas fa-search-dollar" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4>Influencer Verification</h4>
+                                    <p>Ensure influencers have real, engaged audiences before partnership investments.</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-trademark" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4>Brand Protection</h4>
+                                    <p>Avoid association with fraudulent accounts that could damage your brand reputation.</p>
+                                </div>
+                            </div>
+                            <div class="example-point">
+                                <i class="fas fa-chart-pie" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4>Campaign ROI Maximization</h4>
+                                    <p>Ensure marketing budgets reach real people, not bot networks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>VeriSocial</h4>
+                    <div class="footer-links">
+                        <a href="#">About Us</a>
+                        <a href="#">Our Technology</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="#">Account Analysis</a>
+                        <a href="#">Influencer Verification</a>
+                        <a href="#">Brand Protection</a>
+                        <a href="#">API Access</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="#">Help Center</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Research</a>
+                        <a href="#">Case Studies</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Compliance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-footer">
+                <div class="team-nexus-footer">TEAM NEXUS</div>
+                <div class="copyright">
+                    <p>&copy; 2024 VeriSocial. All rights reserved. This is a frontend demonstration with mock data only.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
